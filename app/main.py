@@ -11,7 +11,7 @@ def read_root():
 async def ready():
     try:
         await app.state.pool.fetchval("SELECT 1")
-        return {"status": "ok"}
+        return {"status": "Emrehan izin verdi"}
     except Exception:
         raise HTTPException(status_code=503, detail="database not ready")
 
