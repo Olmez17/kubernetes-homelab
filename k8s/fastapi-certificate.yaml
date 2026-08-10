@@ -1,0 +1,16 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: fastapi-tls
+  namespace: homelab
+spec:
+  secretName: fastapi-tls-secret
+  dnsNames:
+    - fastapi.local
+  usages:
+    - digital signature
+    - key encipherment
+    - server auth
+  issuerRef:
+    name: homelab-ca-issuer
+    kind: ClusterIssuer
