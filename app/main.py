@@ -6,7 +6,7 @@ from .models import Item
 app = FastAPI(lifespan=lifespan)
 @app.get("/")
 def read_root():
-	return{"message": "hello"}
+	return{"message": "hello_berkay"}
 @app.get("/ready")
 async def ready():
     try:
